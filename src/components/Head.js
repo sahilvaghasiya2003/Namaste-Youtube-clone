@@ -80,7 +80,11 @@ const Head = () => {
           <div className="fixed bg-white py-2 px-5 w-[28.8rem] shadow-lg rounded-3xl border border-gray-50">
             <ul>
               {suggestion.map((s) => (
-                <li key={s} className="py-1 shadow-sm hover:bg-gray-100">
+                <li
+                  key={s}
+                  className="py-1 shadow-sm hover:bg-gray-100"
+                  onClick={() => setSearchQuery(s)}
+                >
                   {s}
                 </li>
               ))}
